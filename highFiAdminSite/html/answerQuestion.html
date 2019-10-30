@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+    <head>
+        <title>Hifi prototype</title>
+        
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <header>
+        <div id="header-div">
+            <img src='../image/kwizzard.png' style="height:12vw;padding-top:1vw;padding-left:1vw;float: left;" onclick="window.location.href='landing.html'">
+            <h1 style="font-size:5vw; top: 40%; color: white;padding-top:3vw;" onclick="window.location.href='studentLanding.html'"><center>Kwizzard</center></h1>
+        </div>
+    </header>
+    <body>
+        <div class=cleanBody>
+        <h1 id=dynamicQuestion></h1>
+        <div id=MC>
+            
+            <div><a style="text-decoration:none" href="review.html"><button class=mobileButton>answer 1</button></a>
+            <a style="text-decoration:none" href="review.html"><button class=mobileButton>answer 2</button></a></div>
+            <div><a style="text-decoration:none" href="review.html"><button class=mobileButton>answer 3</button></a>
+            <a style="text-decoration:none" href="review.html"><button class=mobileButton>answer 4</button></a></div>
+        </div>
+        <div id=TF>
+                <a style="text-decoration:none" href="review.html"><button class=mobileButton>True</button></a>
+                <a style="text-decoration:none" href="review.html"><button class=mobileButton>False</button></a>
+            </div>
+    <div id=matching>
+        <form action="review.html"></form>
+        <h1>Match 1:
+        <select>
+            <option value="Op11">Option 1</option>
+            <option value="Op12">Option 2</option>
+            <option value="Op13">Option 3</option>
+            <option value="Op14">Option 4</option>
+        </select>
+        </h1>
+        <h1>
+        Match 2:
+        <select>
+            <option value="Op21">Option 1</option>
+            <option value="Op22">Option 2</option>
+            <option value="Op23">Option 3</option>
+            <option value="Op24">Option 4</option>
+        </select></h1>
+        <br>
+        <h1>Match 3:
+        <select>
+            <option value="Op31">Option 1</option>
+            <option value="Op32">Option 2</option>
+            <option value="Op33">Option 3</option>
+            <option value="Op34">Option 4</option>
+        </select>
+    </h1>
+    <h1>
+        Match 4:
+        <select>
+            <option value="Op41">Option 1</option>
+            <option value="Op42">Option 2</option>
+            <option value="Op43">Option 3</option>
+            <option value="Op44">Option 4</option>
+        </select></h1>
+        <br>
+            <input type="submit" value= submit>
+        </form>
+        </div>
+        <div id=calc>
+                <form action="review.html">
+                    <br>
+                    <input type="text" name="calculation" placeholder="value"><br><br>
+                    <input type="submit" value="Submit">
+                  </form>
+        </div>
+    </div>
+    </body>
+    <script>
+        var urlParams = new URLSearchParams(location.search);
+        var Question = urlParams.get('id');    // 1234
+        if(Question=="1")
+        {
+            document.getElementById("dynamicQuestion").innerHTML = "Multiple Choice?";
+            var element = document.getElementById("TF");
+            element.parentNode.removeChild(element);
+            element = document.getElementById("matching");
+            element.parentNode.removeChild(element);
+            element = document.getElementById("calc");
+            element.parentNode.removeChild(element);
+        }
+        if(Question=="2")
+        {
+            document.getElementById("dynamicQuestion").innerHTML = "True False?";
+            var element = document.getElementById("MC");
+            element.parentNode.removeChild(element);
+            element = document.getElementById("matching");
+            element.parentNode.removeChild(element);
+            element = document.getElementById("calc");
+            element.parentNode.removeChild(element);
+        }
+        if(Question=="3")
+        {
+            document.getElementById("dynamicQuestion").innerHTML = "Matching?";
+            var element = document.getElementById("TF");
+            element.parentNode.removeChild(element);
+            element = document.getElementById("MC");
+            element.parentNode.removeChild(element);
+            element = document.getElementById("calc");
+            element.parentNode.removeChild(element);
+        }
+        if(Question=="4")
+        {
+            document.getElementById("dynamicQuestion").innerHTML = "Calculation?";
+            var element = document.getElementById("TF");
+            element.parentNode.removeChild(element);
+            element = document.getElementById("matching");
+            element.parentNode.removeChild(element);
+            element = document.getElementById("MC");
+            element.parentNode.removeChild(element);
+        }
+        
+    </script>
+    <footer>
+
+    </footer>
+</html>

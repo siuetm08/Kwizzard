@@ -1,0 +1,119 @@
+header
+{
+    background-color: red;
+    position: relative;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 23vw;
+    top: 0%;
+    bottom: 10%;
+    margin-top: -5vw;
+    margin-bottom: -13vw;
+}
+#header-div
+{
+    background-color:black;
+    position: relative;
+    left: 10%;
+    top: 23%;
+    height:60%;
+    width: 75%;
+}
+body
+{
+    background-color:white;
+    text-decoration-color: black;
+}
+a{
+    text-decoration: none;
+}
+.cleanBody{
+    margin-top: 15%;
+    width: 25%;
+    background-color: white;
+    border-color: red;
+    border-radius: 3px;
+    padding:3%;
+}
+.expandedCleanBody{
+    margin-top: 15%; 
+    background-color: red;
+    border-radius: 25px;
+    padding:3%;
+}
+
+div.expandedCleanBody{
+	margin-left:auto;
+	margin-right:auto;
+	width:50%;
+}
+
+#dynamicQuestion{
+
+}
+.mobileButtonGroup
+{
+    margin-top:10%;
+}
+.mobileButton{
+    padding: 1%;
+    background-color: white;
+    border: 1%;
+    border: 2px solid red;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin-left: 10%;
+    padding: 3%;
+}
+.mobileButton:hover{
+    background-color:black;
+    color:white;
+}
+.cleanInterior{
+    margin-left: 25%;
+    margin-top:-10%;
+}
+#hidden{
+    visibility: hidden;
+}
+@media only screen and (max-width: 768px) {
+.mobileButton
+{
+    padding: 1%;
+    background-color: white;
+    border: 1%;
+    border: 2px solid red;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin-left: 5%;
+    padding: 3%;
+}
+.menuButton
+{
+    padding: 1%;
+    background-color: white;
+    border: 1%;
+    border: 2px solid red;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin-left: 5%;
+    margin-top:10%;
+    padding: 3%;
+}
+.cleanBody{
+    margin-top: 15%;
+    width: 95%;
+    background-color:red;
+    border-radius: 25px;
+    padding:3%;
+}
+#extraLeft
+{
+    margin-left:10%;
+}
+
+}
