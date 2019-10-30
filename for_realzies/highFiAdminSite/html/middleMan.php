@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
-    <head>
-        <title>Kwizzard</title> 
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    </head>
-    <header>
-        <div id="header-div">
-            <img src='../image/kwizzard.png' style="height:12vw;padding-top:1vw;padding-left:1vw;float: left;" onclick="window.location.href='landing.html'">
-            <h1 style="font-size:5vw; top: 40%; color: white;padding-top:3vw;" onclick="window.location.href='studentLanding.html'"><center>Kwizzard</center></h1>
-        </div>
-    </header>
     <body>
         <div class=cleanBody>
 <?php
@@ -51,8 +41,8 @@
         while ($row = mysqli_fetch_assoc($result)) {	
 	 	$answer=$row['answer'];//echo "$type";
 	}
-	echo "ans=$ans";
-	echo "answer=$answer";
+	//echo "ans=$ans";
+	//echo "answer=$answer";
 	if($ans==$answer)
 		mysqli_query($conn,"UPDATE question SET correct=correct+1 WHERE ID=$ID;");
 	mysqli_query($conn,"UPDATE question SET total=total+1 WHERE ID=$ID;");
@@ -62,6 +52,6 @@
     </div>
     </body>
     <footer>
-	<meta http-equiv="Refresh" content="1; url=review.php<?php echo "?id=$ID" ?>">
+	<meta http-equiv="Refresh" content="0; url=review.php<?php echo "?id=$ID" ?>">
     </footer>
 </html>

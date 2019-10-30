@@ -55,14 +55,9 @@ else if($_SESSION['name'] == "") {
 } else {
 ?>
 	<div class=cleanBody>
-        <div class=cleanInterior>
+       
 	<h1> Hello <?php echo $_SESSION['name']; ?> </h1>
-	</div>
-	        <div class=mobileButtonGroup>
-	        <a onclick="window.location.href='review.php'">
-            <button type="button" class=mobileButton >See Questions</button>
-        </a>
-        </div>
+	<div>You will recieve an email when the next question arrives.</div> 
     </div>
 <?php
 } 

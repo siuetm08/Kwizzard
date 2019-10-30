@@ -32,7 +32,7 @@ session_start();
             <a onclick="window.location.href='/php/addStudent.php'">
                 <button type="button" class=mobileButton >Add students</button>
             </a>
-            <a onclick="window.location.href='addQuestion.html'">
+            <a onclick="window.location.href='addQuestion.php'">
                 <button type="button" class=mobileButton >Add Questions</button>
             </a>
             </div>

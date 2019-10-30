@@ -66,16 +66,19 @@
         <h1 id=dynamicQuestion><?php echo "$question";?></h1>
 	<div id=SQL style="visibility: hidden"><?php echo "$type";?></div>
         <div id=MC>
-            <div><a style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=1";?>"><button class=mobileButton><?php echo "$choice1";?></button></a>
+            <div id=extraRight><a style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=1";?>"><button class=mobileButton><?php echo "$choice1";?></button></a>
             <a style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=2";?>"><button class=mobileButton><?php echo "$choice2";?></button></a></div>
-            <div><a style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=3";?>"><button class=mobileButton><?php echo "$choice3";?></button></a>
+            <div id=extraRight><a style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=3";?>"><button class=mobileButton><?php echo "$choice3";?></button></a>
             <a style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=4";?>"><button class=mobileButton><?php echo "$choice4";?></button></a></div>
         </div>
         <div id=TF>
+	<div id=extraRight>
                 <a style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=1";?>"><button class=mobileButton>True</button></a>
                 <a style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=2";?>"><button class=mobileButton>False</button></a>
             </div>
+	</div>
     <div id=matching>
+	<div id=extraRight>
         <h1><?php echo "$match1";?>
         <select id=m1>
             <option value="1"><?php echo "$choice1";?></option>
@@ -109,14 +112,14 @@
             <option value="3"><?php echo "$choice3";?></option>
             <option value="4"><?php echo "$choice4";?></option>
         </select></h1>
-        <br>
+        </div>
 		    <script>
                         function match(){
                         document.getElementById("hrefmatch").href+=document.getElementById("m1").value+document.getElementById("m2").value+document.getElementById("m3").value+document.getElementById("m4").value;
                         }
                     </script>
 		    <a id=hrefmatch style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=";?>"><input onclick="match()" type="submit" value="Submit"></a>
-        </div>
+	</div>
         <div id=calc> 
                     <br>
                     <input id="calcText" name=calcText type="text"  placeholder="value"><br><br>

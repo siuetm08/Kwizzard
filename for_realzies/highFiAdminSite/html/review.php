@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Kwizzard</title>
-        
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
     </head>
     <header>
@@ -65,8 +65,8 @@
          mysql_close($conn);
       ?>
 	<div id=SQL style="visibility: hidden"><?php echo $type;?></div>
-        <div id=dynamicQuestion><?php echo $question; ?> </div>
-        <div id=MC>
+        <h1 id=dynamicQuestion><?php echo $question; ?> </h1>
+        <h2 id=MC>
 		<?php
 		if($answer==1)
 			echo "$choice1";
@@ -78,16 +78,16 @@
                         echo "$choice4";
 		?>
        	
-        </div>
-        <div id=TF>
+        </h2>
+        <h2 id=TF>
             <?php
                 if($answer==1)
                         echo "$choice1";
                 elseif($answer==2)
                         echo "$choice2";
                 ?>
-            </div>
-    <div id=matching>
+            </h2>
+    <h2 id=matching>
         <?php	
 		$p1=$answer[0];
 		$p2=$answer[1];
@@ -130,21 +130,17 @@
                 else if($p4==4)
                         echo" $match4\n";	
 	?>
-    </h1>
+    </h2>
         </form>
-        </div>
-        <div id=calc>
+        <h2 id=calc>
         	<?php
 			echo $answer;
 		?>
-        </div>
-	<div>
-	<?php
-		echo $review;
-	?>
+        </h2>
+	<div><?php echo $review;?>
 	</div>
 	<br><br>
-	<div>
+	<div id=littleExtraRight>
         <a style="text-decoration:none" href="studentLanding.php"<button class=mobileButton type=button>Continue</button></a>
 	</div>
 	</div>
