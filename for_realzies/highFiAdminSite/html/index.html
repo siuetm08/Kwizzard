@@ -1,28 +1,52 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <html>
-    <head>
-    <title>Kwizzard</title>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-      <header>
-        <div id="header-div">
-	  <img src='../image/kwizzard.png' style="height:12vw;padding-top:1vw;padding-left:1vw;float: left;" onclick="window.location.href='landing.html'">
-	  <h1 style="font-size:5vw; top: 40%; color: white;padding-top:3vw;" onclick="window.location.href='landing.html'"><center>Kwizzard</center></h1>
-        </div>
-      </header>
-    </head>
-    <body>
-      <div class=cleanBody>
-      <div class=cleanInterior>
-      </div>
-      <div class=mobileButtonGroup>
-	<a onclick="window.location.href='studentLanding.php'">
-            <button type="button" class=mobileButton >Login</button>
-        </a>
-      </div>
-    </div>
-    </body>
-    <footer>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<html>
 
-    </footer>
+<head>
+  <title>Kwizzard</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <header>
+    <div class=header-div>
+      <img class=img src='image/kwizzard.png' onclick="window.location.href='index.html'">
+      <p class=h3>Kwizzard</p>
+      <img class=siue src='image/index.png' onclick="window.location.href='https\://www.siue.edu/'">
+      <button class="login" onclick="window.location.href='studentLanding.php'" type="button">Login</button>
+    </div>
+  </header>
+</head>
+
+<body>
+  <div class=row>
+
+    <div class=column>
+      <h2 class=h2>Instructors</h2><br>
+      <p>
+        If you're an instructor, you'll want to access your account on a desktop.<br>
+        <br>There, you'll be able to create questions and manage your class.
+      </p><br>
+    </div>
+    <div class=column>
+      <h2 class=h2>Kwizzard</h2><br>
+      <p>
+        Kwizzard is a study application based on the principle of sneaky learning.
+      </p><br>
+      <input style="font-size: 11pt; margin-left: 0px" class="mobileButton"
+        onclick="window.location.href='https\://www.chronicle.com/article/How-One-University-Uses/245265'" type="button"
+        value="Sneaky Learning?" /><br>
+    </div>
+    <div class=column>
+      <h2 class=h2>Students</h2><br>
+      <p>
+        Log in here to review previously asked questions. <br>
+        <br>If you have a new question to answer, you'll receive an email notification.
+      </p><br>
+    </div>
+  </div>
+
+</body>
+
+<div class=footer>
+  <p>&copy; Copyright 2019 TM08</p>
+</div>
+
 </html>
