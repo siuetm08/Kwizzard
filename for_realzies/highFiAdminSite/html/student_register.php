@@ -7,7 +7,7 @@ session_start();
 <html>
 
 <head>
-    <title>Kwizzard</title>
+    <title>New User Register</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <header>
         <div class=header-div>
@@ -47,33 +47,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-    <div class=cleanBody>
-        <div class=cleanInterior>
-            <h1> Hello <?php echo $_SESSION['name']; ?> </h1>
-            <p> Looks like you're not set up with us yet, lets get you registered. </p>
-        </div>
-        <form action="insert_new_student.php" method="post">
-            <input type="hidden" name="user" value="<?php echo $_SESSION['name']; ?>">
-            Name: <input type="text" name="name" value="<?php echo $name;?>">
-            <span class="error">* <?php echo $nameErr;?></span>
-            <br><br>
-            E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-            <span class="error">* <?php echo $emailErr;?></span>
-            <br><br>
-            Year:<br>
-            <input type="radio" name="year" <?php if (isset($year) && $year=="1") echo "checked";?> value="1">
-            Freshman<br>
-            <input type="radio" name="year" <?php if (isset($year) && $year=="2") echo "checked";?> value="2">
-            Sophomore<br>
-            <input type="radio" name="year" <?php if (isset($year) && $year=="3") echo "checked";?> value="3">
-            Junior<br>
-            <input type="radio" name="year" <?php if (isset($year) && $year=="4") echo "checked";?> value="4">
-            Senior<br>
+    <h1 class=h2 style="font-weight: 200"> Hello <?php echo /*phpCAS::getUser()*/''; ?> </h1><br>
+    <p style="text-align: center"> Thanks for trying out Kwizzard! </p>
+    <br>
+    <p style="text-align: center"> Register with us to receive questions from your instructor. </p>
+
+    <form action="insert_new_student.php" method="post">
+
+        <input type="hidden" name="user" value="<?php echo /*phpCAS::getUser()*/''; ?>"><br>
+        <label for="year">Year</label>
+        <span class="error">* <?php echo $nameErr;?></span>
+        <select name="year">
+            <option value="1">Freshman</option>
+            <option value="2">Sophomore</option>
+            <option value="3">Junior</option>
+            <option value="4">Senior</option>
+        </select><br><br>
+        <label for="name">Name</label>
+        <span class="error">* <?php echo $nameErr;?></span>
+        <input type="text" name="name" value="<?php echo $name;?>" placeholder="First and Last Name...">
+        <br><br>
+        <label for="email">Email</label>
+        <span class="error">* <?php echo $emailErr;?></span>
+        <input type="text" name="email" value="<?php echo $email;?>" placeholder="Email...">
+        <br><br>
+        <div class="fl">
             <input type="submit" class=mobileButton name="submit" value="Submit">
-        </form>
-    </div>
-    <div class=footer>
-        <p>&copy; Copyright 2019 TM08</p>
+        </div>
+    </form>
     </div>
 </body>
 

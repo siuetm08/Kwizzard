@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost", "root", "", "kwizzard");
+$link = mysqli_connect("localhost", "root", "2111995", "kwizzard");
  
 // Check connection
 if($link === false){

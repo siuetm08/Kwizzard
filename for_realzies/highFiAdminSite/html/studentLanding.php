@@ -56,8 +56,8 @@ else if($_SESSION['name'] == "") {
 } else {
     ?>
     <div class=header-div style="background-color: whitesmoke;border-style: none">
-        <h2 class=h2 style="margin-left: 15px;width: 85%;align-self: center"><?php echo "Hello " . $_SESSION['name'] . "!"; ?></h2>
-        <h2 class=h2 style="position: absolute;right: 0;align-self: center;margin-right: 15px;padding-left: 3px"><?php echo $_SESSION['score']; ?></h2>
+        <h3 class=h2 style="margin-left: 0;width: 100%;align-self: center"><?php echo "Hello " . $_SESSION['name'] . "!"; ?></h2>
+        <h2 class=h2 style="border-style: none;position: absolute;right: 0;align-self: center;margin-right: 15px;padding-left: 3px"><?php echo $_SESSION['score']; ?></h2>
 </div>
     <div class=row>
         <?php

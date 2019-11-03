@@ -8,7 +8,7 @@
 body {
     background-color: whitesmoke;
     text-decoration-color: black;
-    font-family: "Arial",sans-serif;
+    font-family: "Arial", sans-serif;
 }
 
 .row {
@@ -67,10 +67,12 @@ div.expandedCleanBody {
     margin-left: 10%;
     padding: 3%;
 }
+
 .login:hover, .mobileButton:hover {
     background-color: rgb(175, 49, 53);
     border: 1px solid rgb(175, 49, 53);
 }
+
 .cleanInterior {
     margin-left: 25%;
     margin-top: -10%;
@@ -80,6 +82,45 @@ div.expandedCleanBody {
     visibility: hidden;
 }
 
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px 0px 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label, span {
+    padding: 12px 12px 12px 0;
+    float: left;
+}
+
+input[type=submit] {
+    background-color: #EA2028;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+
+.fl {
+    display: flex;
+}
 /*
 @media only screen and (max-width: 768px) {
     .mobileButton {
@@ -119,11 +160,10 @@ div.expandedCleanBody {
 
 /* Phone and tablet access */
 
-
-#littleExtraRight
-{
-    margin-left:-10%;
+#littleExtraRight {
+    margin-left: -10%;
 }
+
 @media only screen and (min-width: 300px) and (max-width: 960px) {
     .header-div {
         display: flex;
@@ -186,17 +226,30 @@ div.expandedCleanBody {
         flex-direction: column;
         margin-top: 0px;
     }
-    p
-    {
+    p {
         font-size: 10pt;
     }
-    .column.single{
+    .column.single {
         margin-left: 50%;
-        margin-top: 45%;
-        transform: translate(-50%,-50%);
-        position: absolute;
-        padding: 10px 20px 20px 20px;
+        margin-top: 325px;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        padding: 10px 20px 10px 20px;
         width: 80%;
+    }
+    .col-25, .col-75, input[type=submit] {
+        float: unset;
+        margin: 10px 10px 10px 10px;
+        flex: 1;
+        width: 90%;
+    }
+    input[type=text], select {
+        width: 90%;
+        margin-left: 5%;
+        box-sizing: border-box;
+    }
+    label {
+        margin-left: 5%;
     }
 }
 
@@ -262,12 +315,29 @@ div.expandedCleanBody {
         background-color: white;
         border-top: 1px solid lightgray;
     }
-    .column.single{
+    .column.single {
         margin-left: 50%;
-        margin-top: 20%;
-        transform: translate(-50%,-50%);
-        position: absolute;
+        margin-top: 400px;
+        transform: translate(-50%, -50%);
+        position: fixed;
         padding: 20px 40px 20px 40px;
-        width: 50%;
+        width: 800px;
+        max-width: 700px;
+        max-height: 700px;
+    }
+    
+    .col-25, .col-75, input[type=submit] {
+        margin-left: 0;
+        box-sizing: border-box;
+        flex: 1;
+    }
+    input[type=text], select {
+        box-sizing: border-box;
+        flex: 1;
+        margin-bottom: 30px;
+    }
+    
+    label {
+        margin-left: 5%;
     }
 }
