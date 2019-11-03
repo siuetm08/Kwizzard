@@ -15,15 +15,15 @@
 </header>
 
 <body>
-    <div class="cleanBody">
+    <div class="single column" style="overflow: scroll" >
         <form action="" method="post">
-            <h2>Enter a question </h2>
+            <h2 class=h2 style="margin-bottom: 20px">Enter a Question </h2>
 
             <textarea name="question" rows="4" cols="50" value="Question:"></textarea><br>
-            <h2>Enter Course</h2>
+            <h2><label for="course">Enter Course</label></h2>
 
             <input type="text" name="course"><br><br>
-            <h2>Select a difficulty</h2>
+            <h2><label for="difficulty">Select a difficulty</label></h2>
             <select name=difficulty>
                 <option value="1">P1</option>
                 <option value="2">P2</option>
@@ -31,17 +31,17 @@
                 <option value="4">P4</option>
             </select><br>
 
-            <h2>Add image(optional)</h2>
-            <input type="file" name="pic" accept="image/*">
+            <p>Add image(optional)</p>
+            <input type="file" name="pic" accept="image/*"><br><br>
             <div>
                 <div>
-                    <h2><input type="radio" id="MC" name="type" value="Multiple Choice" checked>
-                        <label for="MC">Multiple Choice</label><br></h2>
-                    Option 1: <input type=text name="MC1"><br>
-                    Option 2: <input type=text name="MC2"><br>
-                    Option 3: <input type=text name="MC3"><br>
-                    Option 4: <input type=text name="MC4"><br>
-                    Answer:<select name=MCAns>
+                <h2><label for="MC">Multiple Choice</label></h2>
+                        <input type="radio" id="MC" name="type" value="Multiple Choice" checked><br><br><br><br>
+                            <label for="MC1">Option 1</label><input type=text name="MC1"><br>
+                            <label for="MC2">Option 2</label><input type=text name="MC2"><br>
+                            <label for="MC3">Option 3</label><input type=text name="MC3"><br>
+                            <label for="MC4">Option 4</label><input type=text name="MC4"><br>
+                        <label for="MCAns">Answer</label><select name=MCAns>
                         <option value="1">Option 1</option>
                         <option value="2">Option 2</option>
                         <option value="3">Option 3</option>
