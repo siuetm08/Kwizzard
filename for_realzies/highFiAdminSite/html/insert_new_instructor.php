@@ -18,37 +18,49 @@ $sql = "INSERT INTO user (eID, name, email, admin) VALUES ('$user', '$title$name
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
-    <head>
-        <title>Kwizzard</title>
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
-        <header>
-            <div id="header-div">
-                <img src='../image/kwizzard.png' style="height:12vw;padding-top:1vw;padding-left:1vw;float: left;" onclick="window.location.href='instructorLanding.php'">
-                <h1 style="font-size:5vw; top: 40%; color: white;padding-top:3vw;" onclick="window.location.href='landing.html'"><center>Kwizzard</center></h1>
-            </div>
-            
-        </header>
-    </head>
+
+<head>
+    <title>Registration Confirmed!</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <header>
+        <div class=header-div>
+            <img class=img src='image/kwizzard.png' onclick="window.location.href='studentLanding.php'">
+            <p class=h3>Kwizzard</p>
+            <img class=siue src='image/index.png' onclick="window.location.href='https\://www.siue.edu/'">
+        </div>
+    </header>
+</head>
+
 <body>
 
-<?php 
+    <?php 
 if(mysqli_query($link, $sql)){
 ?>
-<div class=cleanBody>
-        <div class=cleanInterior>
-	<h1> Thanks for registering! </h1>
-	<p> You can access your class here </p>
-	</div>
-	        <div class=mobileButtonGroup>
-	        	<a onclick="window.location.href='instructorLanding.php'">
-            			<button type="button" class=mobileButton >Take Me Home</button>
-        		</a>
-        	</div>
-</div> 
-<?php 
+        <div class="column single">
+            <h2 class=h2> Thanks for registering!</h2>
+            <br>
+            <p>Now that you're set up, make sure your students get this link:</p><br>
+            <a href="https://kwizzard.isg.siue.edu/">https://kwizzard.isg.siue.edu</a><br>
+            <br> 
+            <p>On their first log in, they'll be authenticated through SIUe's Central Authentication Service. 
+                Their emails will be added to our database and they'll automatically receive emails when questions
+                are sent out!</p><br>
+            <p>Hit the button below to go to your dashboard!</p><br>
+            <input style="padding:10px;font-size: 11pt; margin: 0px;" class="mobileButton"
+                onclick="window.location.href='studentLanding.php'" type="button" value="Take Me Home" /><br>
+        </div>
+    </div>
+    <?php 
 } else { 
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
 // Close connection
 mysqli_close($link);
 ?>
+
+    <div class=footer>
+        <p>&copy; Copyright 2019 TM08</p>
+    </div>
+</body>
+
+</html>

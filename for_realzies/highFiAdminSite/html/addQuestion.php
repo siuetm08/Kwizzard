@@ -1,81 +1,83 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
-	<head>
-		<title>Add Student</title>
-		<link rel="stylesheet" type="text/css" href="../stylesheet.css">
-	</head>
-	<header>
-		<div id="header-div">
-			<img src='../image/kwizzard.png' style="height:12vw;padding-top:1vw;padding-left:1vw;float: left;" onclick="window.location.href='../landing.html'">
-			<h1 style="font-size:5vw; top: 40%; color: white;padding-top:3vw;" onclick="window.location.href='../landing.html'"><center>Kwizzard</center></h1>
-		</div>
-	</header>
 
-	<body>
-				<div class="cleanBody">
-                        <form action="" method="post">
-                                <h2>Enter a question </h2>
+<head>
+    <title>New Question</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<header>
+    <div class=header-div>
+        <img class=img src='image/kwizzard.png' onclick="window.location.href='studentLanding.php'">
+        <p class=h3>Kwizzard</p>
+        <img class=siue src='image/index.png' onclick="window.location.href='https\://www.siue.edu/'">
+    </div>
+</header>
 
-                                <textarea name="question" rows="4" cols="50" value="Question:"></textarea><br>
-                                <h2>Enter Course</h2>
+<body>
+    <div class="cleanBody">
+        <form action="" method="post">
+            <h2>Enter a question </h2>
 
-                                <input type="text" name="course"><br><br>
-				<h2>Select a difficulty</h2>
-				<select name=difficulty>
-                                	<option value="1">P1</option>
-                                        <option value="2">P2</option>
-                                        <option value="3">P3</option>
-                                        <option value="4">P4</option>
-                                </select><br>
+            <textarea name="question" rows="4" cols="50" value="Question:"></textarea><br>
+            <h2>Enter Course</h2>
 
-                                <h2>Add image(optional)</h2>
-                                <input type="file" name="pic" accept="image/*">
-                                <div>
-                                <div>
-                                <h2><input type="radio" id="MC" name="type" value="Multiple Choice" checked>
-                                        <label for="MC">Multiple Choice</label><br></h2>
-                                        Option 1: <input type=text name="MC1"><br>
-                                        Option 2: <input type=text name="MC2"><br>
-                                        Option 3: <input type=text name="MC3"><br>
-                                        Option 4: <input type=text name="MC4"><br>
-                                        Answer:<select name=MCAns>
-                                                <option value="1">Option 1</option>
-                                                <option value="2">Option 2</option>
-                                                <option value="3">Option 3</option>
-                                                <option value="4">Option 4</option>
-                                        </select><br>
+            <input type="text" name="course"><br><br>
+            <h2>Select a difficulty</h2>
+            <select name=difficulty>
+                <option value="1">P1</option>
+                <option value="2">P2</option>
+                <option value="3">P3</option>
+                <option value="4">P4</option>
+            </select><br>
 
-                                <h2><input type="radio" id="TF" name="type" value="True False">
-                                        <label for="TF">True False</label><br></h2>
-					Answer:<select name=TFans>
-                                               	<option value="1">True</option>
-                                               	<option value="2">False</option>
-                                        </select><br>
+            <h2>Add image(optional)</h2>
+            <input type="file" name="pic" accept="image/*">
+            <div>
+                <div>
+                    <h2><input type="radio" id="MC" name="type" value="Multiple Choice" checked>
+                        <label for="MC">Multiple Choice</label><br></h2>
+                    Option 1: <input type=text name="MC1"><br>
+                    Option 2: <input type=text name="MC2"><br>
+                    Option 3: <input type=text name="MC3"><br>
+                    Option 4: <input type=text name="MC4"><br>
+                    Answer:<select name=MCAns>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select><br>
 
-                                <h2><input type="radio" id="Matching" name="type" value="Matching">
-                                        <label for="Matching">Matching</label><br></h2>
-                                        Item 1: <input type=text name="I1"><br> <br>Option 1: <input type=text name="OP1"><br><br><br>
-                                        Item 2: <input type=text name="I2"><br> <br>Option 2: <input type=text name="OP2"><br><br><br>
-                                        Item 3: <input type=text name="I3"><br> <br>Option 3: <input type=text name="OP3"><br><br><br>
-                                        Item 4:<input type=text name="I4"><br> <br>Option 4: <input type=text name="OP4"><br><br><br>
-                                        Answer(format is 1:W,2:X,3:Y,4:Z): <input type=text name="MatchAns">
+                    <h2><input type="radio" id="TF" name="type" value="True False">
+                        <label for="TF">True False</label><br></h2>
+                    Answer:<select name=TFans>
+                        <option value="1">True</option>
+                        <option value="2">False</option>
+                    </select><br>
 
-                                <h2><input type="radio" id="Calc" name="type" value="Calculations">
-                                        <label for="Calc">Calculations</label><br></h2>
-                                        Answer: <input type=text name="CalcAns"><br><br><br>
-                                </div>
-                                </div>
-				<h2>Enter Answer reasoning</h2>
+                    <h2><input type="radio" id="Matching" name="type" value="Matching">
+                        <label for="Matching">Matching</label><br></h2>
+                    Item 1: <input type=text name="I1"><br> <br>Option 1: <input type=text name="OP1"><br><br><br>
+                    Item 2: <input type=text name="I2"><br> <br>Option 2: <input type=text name="OP2"><br><br><br>
+                    Item 3: <input type=text name="I3"><br> <br>Option 3: <input type=text name="OP3"><br><br><br>
+                    Item 4:<input type=text name="I4"><br> <br>Option 4: <input type=text name="OP4"><br><br><br>
+                    Answer(format is 1:W,2:X,3:Y,4:Z): <input type=text name="MatchAns">
 
-                                <textarea name="review" rows="4" cols="50" value="Question:"></textarea><br>
-				<br><br>		
-				<input type=submit value=Submit name="submit"/>
-					
-			</form>
-			<br>
-        	</div>
-<?php
+                    <h2><input type="radio" id="Calc" name="type" value="Calculations">
+                        <label for="Calc">Calculations</label><br></h2>
+                    Answer: <input type=text name="CalcAns"><br><br><br>
+                </div>
+            </div>
+            <h2>Enter Answer reasoning</h2>
+
+            <textarea name="review" rows="4" cols="50" value="Question:"></textarea><br>
+            <br><br>
+            <input type=submit value=Submit name="submit" />
+
+        </form>
+        <br>
+    </div>
+    <?php
         	$dbhost = 'localhost';
 		$username='root';
 		$password='';
@@ -172,5 +174,9 @@
 		}
 ?>
 
+    <div class=footer>
+        <p>&copy; Copyright 2019 TM08</p>
+    </div>
 </body>
+
 </html>

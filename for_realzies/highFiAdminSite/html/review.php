@@ -1,19 +1,23 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
-    <head>
-        <title>Kwizzard</title>
-       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    </head>
-    <header>
-        <div id="header-div">
-            <img src='../image/kwizzard.png' style="height:12vw;padding-top:1vw;padding-left:1vw;float: left;" onclick="window.location.href='landing.html'">
-            <h1 style="font-size:5vw; top: 40%; color: white;padding-top:3vw;" onclick="window.location.href='studentLanding.html'"><center>Kwizzard</center></h1>
-        </div>
-    </header>
+
+<head>
+    <title>Kwizzard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<header>
+    <div class=header-div>
+        <img class=img src='image/kwizzard.png' onclick="window.location.href='studentLanding.php'">
+        <p class=h3>Kwizzard</p>
+        <img class=siue src='image/index.png' onclick="window.location.href='https\://www.siue.edu/'">
+    </div>
+</header>
+
 <body>
-<div class=cleanBody>
-<?php
+    <div class=cleanBody>
+        <?php
          $dbhost = '127.0.0.1';
          $username='root';
          $password='';
@@ -201,5 +205,6 @@
 
     </script>
 
-    </footer>
+</footer>
+
 </html>

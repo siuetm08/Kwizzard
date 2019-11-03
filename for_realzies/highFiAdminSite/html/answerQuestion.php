@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
-    <head>
-        <title>Kwizzard</title>
-        
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    </head>
-    <header>
-        <div id="header-div">
-            <img src='../image/kwizzard.png' style="height:12vw;padding-top:1vw;padding-left:1vw;float: left;" onclick="window.location.href='landing.html'">
-            <h1 style="font-size:5vw; top: 40%; color: white;padding-top:3vw;" onclick="window.location.href='studentLanding.html'"><center>Kwizzard</center></h1>
-        </div>
-    </header>
-    <body>
-        <div class=cleanBody style="background-color:white; border-color:red; border-style:solid;border-width:3px;text-align:center;">
-<?php
+
+<head>
+    <title>My Question</title>
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<header>
+    <div class=header-div>
+        <img class=img src='image/kwizzard.png' onclick="window.location.href='studentLanding.php'">
+        <p class=h3>Kwizzard</p>
+        <img class=siue src='image/index.png' onclick="window.location.href='https\://www.siue.edu/'">
+    </div>
+</header>
+
+<body>
+    <div class=cleanBody
+        style="background-color:white; border-color:red; border-style:solid;border-width:3px;text-align:center;">
+        <?php
          $dbhost = '127.0.0.1';
 	 $username='root';
 	 $password='';
@@ -64,7 +68,7 @@
          mysql_close($conn);
      ?>
         <h1 id=dynamicQuestion><?php echo "$question";?></h1>
-	<div id=SQL style="visibility: hidden"><?php echo "$type";?></div>
+        <div id=SQL style="visibility: hidden"><?php echo "$type";?></div>
         <div id=MC>
             <div id=extraRight><a style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=1";?>"><button class=mobileButton><?php echo "$choice1";?></button></a>
             <a style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=2";?>"><button class=mobileButton><?php echo "$choice2";?></button></a></div>
@@ -131,63 +135,57 @@
                     <a id=hrefcalc style="text-decoration:none" href="middleMan.php?id=<?php echo "$ID&ans=";?>"><input onclick="change()" type="submit" value="Submit"></a>
        </div>
     </div>
-    </body>
-    <script>
-        var ele = document.getElementById("SQL");
-	var Question=ele.innerHTML;
-        if(Question=="MC")
-        {
-            var element = document.getElementById("TF");
-            element.parentNode.removeChild(element);
-            element = document.getElementById("matching");
-            element.parentNode.removeChild(element);
-            element = document.getElementById("calc");
-            element.parentNode.removeChild(element);
-        }
-        else if(Question=="TF")
-        {  
-            var element = document.getElementById("MC");
-            element.parentNode.removeChild(element);
-            element = document.getElementById("matching");
-            element.parentNode.removeChild(element);
-            element = document.getElementById("calc");
-            element.parentNode.removeChild(element);
-        }
-        else if(Question=="Matching")
-        {
-            var element = document.getElementById("TF");
-            element.parentNode.removeChild(element);
-            element = document.getElementById("MC");
-            element.parentNode.removeChild(element);
-            element = document.getElementById("calc");
-            element.parentNode.removeChild(element);
-        }
-        else if(Question=="Calc")
-        {
-            var element = document.getElementById("TF");
-            element.parentNode.removeChild(element);
-            element = document.getElementById("matching");
-            element.parentNode.removeChild(element);
-            element = document.getElementById("MC");
-            element.parentNode.removeChild(element);
-        }
-	else
-	{
-	    var element = document.getElementById("TF");
-            element.parentNode.removeChild(element);
-            element = document.getElementById("matching");
-            element.parentNode.removeChild(element);
-            element = document.getElementById("MC");
-            element.parentNode.removeChild(element);
-	    element = document.getElementById("calc");
-            element.parentNode.removeChild(element);
-	    element = document.getElementById("dynamicQuestion");
-	    element.innerHTML="Question does not exist or has been removed";
-	}
+    <div class=footer>
+        <p>&copy; Copyright 2019 TM08</p>
+    </div>
+</body>
+<script>
+var ele = document.getElementById("SQL");
+var Question = ele.innerHTML;
+if (Question == "MC") {
+    var element = document.getElementById("TF");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("matching");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("calc");
+    element.parentNode.removeChild(element);
+} else if (Question == "TF") {
+    var element = document.getElementById("MC");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("matching");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("calc");
+    element.parentNode.removeChild(element);
+} else if (Question == "Matching") {
+    var element = document.getElementById("TF");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("MC");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("calc");
+    element.parentNode.removeChild(element);
+} else if (Question == "Calc") {
+    var element = document.getElementById("TF");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("matching");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("MC");
+    element.parentNode.removeChild(element);
+} else {
+    var element = document.getElementById("TF");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("matching");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("MC");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("calc");
+    element.parentNode.removeChild(element);
+    element = document.getElementById("dynamicQuestion");
+    element.innerHTML = "Question does not exist or has been removed";
+}
+</script>
 
-    </script>
+<footer>
 
-    <footer>
+</footer>
 
-    </footer>
 </html>

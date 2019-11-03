@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
-	<head>
-		<title>Add Student</title>
-		<link rel="stylesheet" type="text/css" href="../stylesheet.css">
-	</head>
-	<header>
-		<div id="header-div">
-			<img src='../image/kwizzard.png' style="height:12vw;padding-top:1vw;padding-left:1vw;float: left;" onclick="window.location.href='../landing.html'">
-			<h1 style="font-size:5vw; top: 40%; color: white;padding-top:3vw;" onclick="window.location.href='../landing.html'"><center>Kwizzard</center></h1>
-		</div>
-	</header>
 
-	<body>
-		<div class="expandedCleanBody">
-<?php
+<head>
+    <title>Question</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+</head>
+<header>
+    <div class=header-div>
+        <img class=img src='image/kwizzard.png' onclick="window.location.href='studentLanding.php'">
+        <p class=h3>Kwizzard</p>
+        <img class=siue src='image/index.png' onclick="window.location.href='https\://www.siue.edu/'">
+    </div>
+</header>
+
+<body>
+    <div class="expandedCleanBody">
+        <?php
         	$dbhost = 'localhost';
 		$username='root';
 		$password='';
@@ -46,47 +48,49 @@
          	}
          	echo "</table>";
 ?>
-		<br>
-		<form action="" method="post">
-		<div> 
-		I would like to  <select onChange=change() id=action name=action><option value=remove>Remove</option><option value=edit>Edit</option></select> the question with ID <input name=id type=textbox>.
-	  	<br><br>    
-		<div name=edit id=edit style="display: none;">
-		Change <select id=field name=field> 
-			<option value=question>Question</option>
-			<option value=course>Course</option>
-			<option value=choice1>Choice1</option>
+        <br>
+        <form action="" method="post">
+            <div>
+                I would like to <select onChange=change() id=action name=action>
+                    <option value=remove>Remove</option>
+                    <option value=edit>Edit</option>
+                </select> the question with ID <input name=id type=textbox>.
+                <br><br>
+                <div name=edit id=edit style="display: none;">
+                    Change <select id=field name=field>
+                        <option value=question>Question</option>
+                        <option value=course>Course</option>
+                        <option value=choice1>Choice1</option>
                         <option value=choice2>Choice2</option>
-			<option value=choice3>Choice3</option>
+                        <option value=choice3>Choice3</option>
                         <option value=choice4>Choice4</option>
-			<option value=match1>Match1</option>
+                        <option value=match1>Match1</option>
                         <option value=match2>Match2</option>
                         <option value=match3>Match3</option>
                         <option value=match4>Match4</option>
-			<option value=answer>Answer</option>
+                        <option value=answer>Answer</option>
                         <option value=difficulty>Difficulty</option>
                         <option value=review>Reasoning</option>
-		</select> to <input type=textbox name=newVal id=newVal>.<br>
-		</div>
-	<input id=submit type=submit value=Submit name="submit"/>	
-<script>
-		var edit;
-		var par;
-                function change(){
-			if(document.getElementById("action").value == "remove")
-			{
-				var element = document.getElementById("edit");
-            			element.style.display = "none";		
-			}
-			else{
-				var element = document.getElementById("edit");
-                                element.style.display = "block";
-			}	
-		}
-</script>
-		</form>		
-</div>
-<?php	
+                    </select> to <input type=textbox name=newVal id=newVal>.<br>
+                </div>
+                <input id=submit type=submit value=Submit name="submit" />
+                <script>
+                var edit;
+                var par;
+
+                function change() {
+                    if (document.getElementById("action").value == "remove") {
+                        var element = document.getElementById("edit");
+                        element.style.display = "none";
+                    } else {
+                        var element = document.getElementById("edit");
+                        element.style.display = "block";
+                    }
+                }
+                </script>
+        </form>
+    </div>
+    <?php	
 		if(isset($_POST['submit'])){
 			$action= $_POST['action'];//echo "$action\n";
 			$id = $_POST['id'];//echo "$id\n";
@@ -131,4 +135,5 @@
 		}
 ?>
 </body>
+
 </html>
