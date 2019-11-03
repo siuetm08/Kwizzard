@@ -47,14 +47,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-    <h1 class=h2 style="font-weight: 200"> Hello <?php echo /*phpCAS::getUser()*/''; ?> </h1><br>
+    <h1 class=h2 style="font-weight: 200"> Hello <?php echo phpCAS::getUser(); ?> </h1><br>
     <p style="text-align: center"> Thanks for trying out Kwizzard! </p>
     <br>
     <p style="text-align: center"> Register with us to receive questions from your instructor. </p>
 
     <form action="insert_new_student.php" method="post">
 
-        <input type="hidden" name="user" value="<?php echo /*phpCAS::getUser()*/''; ?>"><br>
+        <input type="hidden" name="user" value="<?php echo phpCAS::getUser(); ?>"><br>
         <label for="year">Year</label>
         <span class="error">* <?php echo $nameErr;?></span>
         <select name="year">

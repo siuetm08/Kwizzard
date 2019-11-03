@@ -4,7 +4,7 @@ session_start();
 //connect to kwizzard database to find a user related to the user CAS returned
 $servername = "127.0.0.1";
 $username = "root";
-$password = "2111995";
+$password = "";
 $dbname = "kwizzard";
 $user = "rfrohoc";
 // Create connection
@@ -50,7 +50,6 @@ if($_SESSION['admin'] == TRUE) {
 	exit();	
 }
 else if($_SESSION['name'] == "") {
-    $_SESSION['name'] = "Boye";
 	header('Location: student_register.php');
         exit();
 } else {

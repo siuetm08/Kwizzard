@@ -9,8 +9,7 @@ phpCAS::setCasServerCACert($cas_server_ca_cert_path);
 
 phpCAS::forceAuthentication();
 
-// $user = phpCAS::getUser();
-$user = "";
+$user = phpCAS::getUser();
 $name = "";
 $admin = "";
 ?>

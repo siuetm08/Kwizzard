@@ -43,13 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
     <div class="column single">
-            <h1 class=h2> Hello <?php echo /*phpCAS::getUser()*/''; ?> </h1><br>
+            <h1 class=h2> Hello <?php echo phpCAS::getUser(); ?> </h1><br>
             <p> If you're here, you're an instructor. </p><br>
             <p> Thanks for trying out Kwizzard! </p>
         
         <form action="insert_new_instructor.php" method="post">
 
-            <input type="hidden" name="user" value="<?php echo /*phpCAS::getUser()*/''; ?>"><br>
+            <input type="hidden" name="user" value="<?php echo phpCAS::getUser(); ?>"><br>
             <label for="title">Title</label><select name="title">
                 <option value=""> </option>
                 <option value="Dr. "> Dr.</option>

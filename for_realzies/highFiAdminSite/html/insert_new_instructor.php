@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost", "root", "2111995", "kwizzard");
+$link = mysqli_connect("localhost", "root", "", "kwizzard");
  
 // Check connection
 if($link === false){
@@ -13,7 +13,7 @@ $email = mysqli_real_escape_string($link, $_REQUEST['email']);
 $title = mysqli_real_escape_string($link, $_REQUEST['title']);
  
 // Attempt insert query execution
-$sql = "INSERT INTO user (eID, name, email, admin) VALUES ('$user', '$title$name', '$email', '1')";
+$sql = "INSERT INTO user (eID, name, email, admin) VALUES ('$user', '$name', '$email', '1')";
 ?>
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -1,6 +1,6 @@
 <?php
 /* Attempt mysql server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "root", "2111995", "kwizzard");
+$link = mysqli_connect("localhost", "root", "", "kwizzard");
  
 // Check connection
 if($link === false){
