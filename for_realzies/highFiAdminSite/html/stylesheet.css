@@ -2,7 +2,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: scroll;
+    overflow: visible;
 }
 
 body {
@@ -65,12 +65,7 @@ div.expandedCleanBody {
     margin-left: 10%;
     padding: 3%;
 }
-
-.mobileButton:hover {
-    background-color: rgb(175, 49, 53);
-    border: 1px solid rgb(175, 49, 53);
-}
-.login:hover {
+.login:hover, .mobileButton:hover {
     background-color: rgb(175, 49, 53);
     border: 1px solid rgb(175, 49, 53);
 }

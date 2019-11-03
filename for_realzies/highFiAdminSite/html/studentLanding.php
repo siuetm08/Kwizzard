@@ -1,13 +1,12 @@
 <?php
 // Start a session
 session_start();
-
 //connect to kwizzard database to find a user related to the user CAS returned
 $servername = "127.0.0.1";
 $username = "root";
 $password = "2111995";
 $dbname = "kwizzard";
-$user = "Boye";
+$user = "rfrohoc";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 $query = "SELECT * FROM user WHERE eID LIKE '$user'";
@@ -29,7 +28,7 @@ if($res = mysqli_query($conn, $query)){
 ?>
 
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
 <html>
 
 <head>
@@ -50,7 +49,7 @@ if($_SESSION['admin'] == TRUE) {
 	header('Location: instructorLanding.php');
 	exit();	
 }
-else if(!isset($_SESSION['name'])) {
+else if($_SESSION['name'] == "") {
     $_SESSION['name'] = "Boye";
 	header('Location: student_register.php');
         exit();
