@@ -80,7 +80,7 @@
     <?php
         	$dbhost = 'localhost';
 		$username='root';
-		$password='';
+		$password='2111995';
 		$db='kwizzard';
 		$conn = new mysqli($dbhost,$username,$password,$db);
 	

@@ -160,8 +160,12 @@ input[type=submit] {
 
 /* Phone and tablet access */
 
-#littleExtraRight {
-    margin-left: -10%;
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
 }
 
 @media only screen and (min-width: 300px) and (max-width: 960px) {

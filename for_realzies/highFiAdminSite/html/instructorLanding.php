@@ -19,10 +19,8 @@ session_start();
 </header>
 
 <body>
-    <div class=cleanBody>
-        <div class=cleanInterior>
-            <h1><?php echo $_SESSION['name']; ?>'s course</h1>
-        </div>
+    <div class="single column">
+            <h2 class=h2><?php echo $_SESSION['name']; ?>'s course</h1>
         <div class=mobileButtonGroup id=extraLeft>
             <a onclick="window.location.href='php/students.php'">
                 <button type="button" class=mobileButton>View Students</button>
